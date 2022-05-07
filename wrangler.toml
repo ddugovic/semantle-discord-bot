@@ -1,6 +1,6 @@
 name = "demantle-discord"
 type = "webpack"
-account_id = "e24de7c361b035e990d2814691027093"
+account_id = "2fba0ab331f6e8eb0e772491799adc92"
 workers_dev = true
 webpack_config = "webpack.config.js"
 compatibility_date = "2022-03-29"
@@ -8,5 +8,5 @@ compatibility_date = "2022-03-29"
 vars = { PUBLIC_KEY = "daec4dd1fc13a0337fc62965c240cc30a1809bc2fb9bdc6fa94b0929225fd66e", APPLICATION_ID = "958325316647002132" }
 
 kv_namespaces = [
-	 { binding = "KV", id = "2ab07a09385540289e95dc3360ec5905" }
+	 { binding = "KV", id = "d1bddd04874c477bbeb1b7a7bb0924b8" }
 ]

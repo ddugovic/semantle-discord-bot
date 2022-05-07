@@ -5,7 +5,7 @@
   "scripts": {
     "build": "wrangler build",
     "dev": "wrangler dev",
-    "deploy": "wrangler publish && sleep 3 && curl https://demantle-discord.toggly.workers.dev/setup"
+    "deploy": "wrangler publish && sleep 3 && curl https://demantle-discord.tinyquasar.workers.dev/setup"
   },
   "author": {
     "name": "Greg Brimble",

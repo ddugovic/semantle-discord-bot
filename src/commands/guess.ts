@@ -30,27 +30,27 @@ async function guessCommand(user: { id: string, name: string }, channelId: strin
   const res = await game.guess(user, word)
 
   if (res.code === 'unknown') {
-    return `I don't know the word **${word}**...`
+    return `Ich kenne das Wort **${word}** nicht...`
   }
 
   const { guess } = res
 
-  let output = `${user.name} guesses **${guess.word}**!`
+  let output = `${user.name} rät **${guess.word}**!`
 
   if (res.code === 'duplicate') {
-    output += `\n${guess.user.name} already guessed **${word}**! Similarity: **${guess.similarity.toFixed(2)}** ${renderPercentile(guess.percentile)}`
+    output += `\n${guess.user.name} hat bereits **${word}** erraten! Ähnlichkeit: **${guess.similarity.toFixed(2)}** ${renderPercentile(guess.percentile)}`
     return output
   }
 
   if (res.code === 'found') {
-    output += ` ${guess.user.name} wins! The secret word is **${guess.word}**.`
+    output += ` ${guess.user.name} gewinnt! Das geheime Wort ist **${guess.word}**.`
   } else {
     output += ` Similarity: **${guess.similarity.toFixed(2)}** ${renderPercentile(guess.percentile)}`
   }
 
   if (res.code === 'found') {
-    output += `\nYou found it in **${guess.guessNumber}** guesses.`
-    output += `\nNext game will be ready in ${renderDuration(game.timeUntilNext)}.`
+    output += `\nSie haben es in **${guess.guessNumber}** Anläufen gefunden.`
+    output += `\nDas nächste Spiel wird in ${renderDuration(game.timeUntilNext)} fertig sein.`
   }
 
   return output
