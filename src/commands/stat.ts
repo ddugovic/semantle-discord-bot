@@ -21,19 +21,19 @@ async function statCommand(channelId: string): Promise<string> {
   const game = SemantleGame.todayForChannel(channelId)
   const guesses = await game.getGuesses()
 
-  let output = `The current game started **${renderDuration(game.timeSinceStart)}** ago.`
+  let output = `Das aktuelle Spiel begann vor **${renderDuration(game.timeSinceStart)}**.`
 
   if (guesses.length === 0) {
-    output += `\nThere haven't been any guesses yet!`
+    output += `\nBisher gab es noch keine Vermutungen!`
     return output
   }
 
-  output += ` There have been **${guesses.length}** guesses so far.`
+  output += ` Bislang gab es **${guesses.length}** Vermutungen.`
 
   const table = new AsciiTable()
   table
     .removeBorder()
-    .setHeading("From", "#", "Guess", "Similarity", "Getting close?", "")
+    .setHeading("Von", "#", "Vermutung", "Ähnlichkeit", "Näher kommen?", "")
 
   // 15 is about as many as discord will let us show in a single message
   for (const g of guesses.slice(0, 15)) {
