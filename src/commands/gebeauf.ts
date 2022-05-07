@@ -12,7 +12,7 @@ import {
 import { secretWords } from "../secretWords"
 
 export const command: ApplicationCommand = {
-  name: "igiveup",
+  name: "gebeauf",
   description: "Give up on today's semantle",
   options: [
     {

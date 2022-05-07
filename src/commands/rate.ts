@@ -13,12 +13,12 @@ import { SemantleGame } from '../game'
 import { renderDuration, renderPercentile } from '../rendering'
 
 export const command: ApplicationCommand = {
-  name: "guess",
-  description: "Make a semantle guess",
+  name: "rate",
+  description: "Eine Semantle-Rate erstellen",
   options: [
     {
-      name: "word",
-      description: "The word to guess",
+      name: "wort",
+      description: "Das Wort zu erraten",
       type: ApplicationCommandOptionType.STRING,
       required: true
     },

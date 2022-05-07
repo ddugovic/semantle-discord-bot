@@ -13,8 +13,8 @@ import { renderPercentile, renderDuration } from '../rendering'
 import { SemantleGame } from '../game'
 
 export const command: ApplicationCommand = {
-  name: "stat",
-  description: "Get current status of Semantle game"
+  name: "stand",
+  description: "Aktuellen Status des Semantle-Spiels abfragen"
 }
 
 async function statCommand(channelId: string): Promise<string> {
