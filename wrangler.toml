@@ -1,12 +1,12 @@
-name = "semantle"
+name = "demantle-discord"
 type = "webpack"
 account_id = "e24de7c361b035e990d2814691027093"
 workers_dev = true
 webpack_config = "webpack.config.js"
 compatibility_date = "2022-03-29"
 
-vars = { PUBLIC_KEY = "adcaaecd5b90d477406793d4571c24d036eeab8323b0839c9fcd7d144af0e4ab", APPLICATION_ID = "955033743347814430" }
+vars = { PUBLIC_KEY = "daec4dd1fc13a0337fc62965c240cc30a1809bc2fb9bdc6fa94b0929225fd66e", APPLICATION_ID = "958325316647002132" }
 
 kv_namespaces = [
-	 { binding = "KV", id = "c332d2251cbc47e3aef4071cb591b4c9" }
+	 { binding = "KV", id = "2ab07a09385540289e95dc3360ec5905" }
 ]
