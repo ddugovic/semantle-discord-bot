@@ -45,7 +45,7 @@ async function guessCommand(user: { id: string, name: string }, channelId: strin
   if (res.code === 'found') {
     output += ` ${guess.user.name} gewinnt! Das geheime Wort ist **${guess.word}**.`
   } else {
-    output += ` Similarity: **${guess.similarity.toFixed(2)}** ${renderPercentile(guess.percentile)}`
+    output += ` Ähnlichkeit: **${guess.similarity.toFixed(2)}** ${renderPercentile(guess.percentile)}`
   }
 
   if (res.code === 'found') {
