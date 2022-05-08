@@ -28,7 +28,7 @@ export class SemantleGame {
     const today = Math.floor(Date.now() / 86400000)
     const initialDay = 19021
     const puzzleNumber = (today - initialDay) % secretWords.length
-    return secretWords[puzzleNumber].toLowerCase()
+    return secretWords[puzzleNumber]
   }
 
   static todayForChannel(channelId: string) {

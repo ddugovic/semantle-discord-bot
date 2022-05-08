@@ -64,7 +64,7 @@ export const handler: InteractionHandler = async (
       .options as ApplicationCommandInteractionDataOption[]
 
     const word = (options.find(
-      (option) => option.name === "word"
+      (option) => option.name === "wort"
     ) as ApplicationCommandInteractionDataOption).value
 
     const user = {
