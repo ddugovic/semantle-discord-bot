@@ -59,7 +59,7 @@ export class SemantleGame {
 
     let guesses = await this.getGuesses()
 
-    const duplicateGuess = guesses.find(g => g.word === word)
+    const duplicateGuess = guesses.find(g => g.word.toLowerCase() === word.toLowerCase())
     if (duplicateGuess) {
       return {
         code: 'duplicate',

@@ -2,7 +2,7 @@
 
 export function renderPercentile(percentile: number | undefined) {
   if (percentile === 1000) {
-    return "FOUND!"
+    return "GEFUNDEN!"
   } else if (percentile != null) {
     const blocks = Math.round((percentile / 1000) * 10)
     return `${percentile.toString().padStart(4, ' ')}/1000 ` + "🟩".repeat(blocks) + "⬛".repeat(10 - blocks)
