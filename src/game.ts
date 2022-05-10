@@ -107,4 +107,22 @@ export class SemantleGame {
       code, guess, guesses
     }
   }
+
+  async fetchHint() {
+    const guesses = await this.getGuesses()
+
+    if (!guesses) {
+      return null
+    }
+
+    const bestGuess = guesses[0].word
+
+    const res = await fetch(`https://demantle.toggly.workers.dev/hint/${this.secret}/${bestGuess}`)
+    if (res.status !== 200) {
+      throw new Error(`Semantle Error: ${res.status} ${res.statusText} ${await res.text()}`)
+    }
+
+    const { hint } = await res.json()
+    return hint
+  }
 }
