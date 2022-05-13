@@ -33,7 +33,7 @@ async function statCommand(channelId: string): Promise<string> {
   const table = new AsciiTable()
   table
     .removeBorder()
-    .setHeading("Von", "#", "Vermutung", "Ähnlichkeit", "Näher kommen?", "")
+    .setHeading("Von", "#", "Vermutung", "Ähnlichkeit", "Näher dran?", "")
 
   // 15 is about as many as discord will let us show in a single message
   for (const g of guesses.slice(0, 15)) {
